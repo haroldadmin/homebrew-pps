@@ -5,20 +5,20 @@
 class Pps < Formula
   desc "Parallel port scanner, not intended for real use"
   homepage "https://github.com/haroldadmin/pps"
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/haroldadmin/pps/releases/download/0.0.3/pps_0.0.3_Darwin_arm64.tar.gz"
-      sha256 "462e2896b5c4468b517d83278084513cbc1979430dc5ef097dab07ba740c1ba3"
+      url "https://github.com/haroldadmin/pps/releases/download/0.0.4/pps_0.0.4_Darwin_arm64.tar.gz"
+      sha256 "30f1118ae71d6e42e1a2afe3984e770a46cad88a4d0374e245f0cf0b8d2c2af9"
 
       def install
         bin.install "pps"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/haroldadmin/pps/releases/download/0.0.3/pps_0.0.3_Darwin_x86_64.tar.gz"
-      sha256 "ae62cefd327dd309c0d5a7068cb61252fc10abb82cc0beb48a901fb9c8635c04"
+      url "https://github.com/haroldadmin/pps/releases/download/0.0.4/pps_0.0.4_Darwin_x86_64.tar.gz"
+      sha256 "9d3010d0a082db894e99244ba988a384db1d4ee6cd808a83b9f09ccdd5e79474"
 
       def install
         bin.install "pps"
@@ -27,17 +27,17 @@ class Pps < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/haroldadmin/pps/releases/download/0.0.3/pps_0.0.3_Linux_arm64.tar.gz"
-      sha256 "90c987329dc6fb4bdf67964a35776e1d969bf00c199e3942f563b58a24f00042"
+    if Hardware::CPU.intel?
+      url "https://github.com/haroldadmin/pps/releases/download/0.0.4/pps_0.0.4_Linux_x86_64.tar.gz"
+      sha256 "ac5c5ebd40aef50be1bfc9df6019eb8a8faafdcd3cd7ca7b339241a31004fb31"
 
       def install
         bin.install "pps"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/haroldadmin/pps/releases/download/0.0.3/pps_0.0.3_Linux_x86_64.tar.gz"
-      sha256 "cb7f3458dda2a0a86189b6774a305fb7ef3373916c3248668f2ea237af57438f"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/haroldadmin/pps/releases/download/0.0.4/pps_0.0.4_Linux_arm64.tar.gz"
+      sha256 "3c80c33f1e5654bc78453d8b0c0f7f95583b6642300c3d0fa9b63bf23c2352d4"
 
       def install
         bin.install "pps"
